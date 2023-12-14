@@ -43,9 +43,3 @@ ex: webpack, React.lazy, Suspense
 - 초기 로딩 시간 감소
 - 비동기 로딩
 - 리소스 효율적 사용
-
-## 학습 키워드
-
-- [Node ](/1주차/학습키워드/Node.md)
-- [NPM](/1주차//학습키워드/Npm.md)
-- [ES Modules vs CommonJS](/1주차/학습키워드/modules.md)
