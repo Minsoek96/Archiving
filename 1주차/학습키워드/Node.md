@@ -1,30 +1,22 @@
-## Node
+# Node
 
 **Node.js는 Chrom v8 자바스크립트 엔진으로 빌드된 자바스크립트 런타임 환경(Runtime Environment)으로 주로 서버 사이드 개발에 사용되는 소프트웨어이다.**
 
-```text
-Node.js는 Non-blocking I/O와 단일 스레드 이벤트 루프를 통한 높은 Request 처리 성능을 가진다.
-```
+> Node.js는 Non-blocking I/O와 단일 스레드 이벤트 루프를 통한 높은 Request 처리 성능을 가진다.
 
-## NoN-Blocking ?
+## NoN-Blocking ???
 
 ### I/O 작업의 개념
 
-```text
 I/O 작업은 파일 시스템 접근, 네트워크 통신 , 데이터베이스 쿼리 등과 같이 데이터를 읽고 쓰는 작업을 포함한다.
-```
 
 ### blocking I/O
 
-```text
 I/O작업이 완료될 때까지 어플리케이션의 실행을 멈추게 한다.
-```
 
-### Non-blocking I/O 
+### Non-blocking I/O
 
-```text
 I/O작업이 완료될 때까지 대기하지 않는다. 제어권을 어플리케이션이 가지고 어플리케이션은 계속 동작한다.
-```
 
 &nbsp;
 
