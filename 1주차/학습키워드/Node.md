@@ -1,6 +1,5 @@
 # Node
 
----
 **Node.js는 Chrom v8 자바스크립트 엔진으로 빌드된 자바스크립트 런타임 환경(Runtime Environment)으로 주로 서버 사이드 개발에 사용되는 소프트웨어이다.**
 
 > Node.js는 Non-blocking I/O와 단일 스레드 이벤트 루프를 통한 높은 Request 처리 성능을 가진다.

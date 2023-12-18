@@ -19,4 +19,5 @@
   - [React](/1주차/React.md)
   - [TestingLibrary](/1주차/TestingLibrary.md)
   - [Parcel&ESLint](/1주차/Parcel.md)
-    
+- [2주차](/2주차/)
+  - [JSX](/2주차/JSX.md)
