@@ -2,9 +2,9 @@
 
 ## GitBook
 
-- [Git Book 가이드](README.md)
-- [GitHub과 연동하기](gitbook/github/README.md)
-  - [PR 날리기](gitbook/github/pr.md)
+* [Git Book 가이드](README.md)
+* [GitHub과 연동하기](gitbook/github/README.md)
+  * [PR 날리기](gitbook/github/pr.md)
 
 ## Dev
 
