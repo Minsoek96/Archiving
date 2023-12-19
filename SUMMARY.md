@@ -12,7 +12,7 @@
 
   - [개발환경셋팅](/1주차/Environment.md)
 
-    - [Node ](/1주차/학습키워드/Node.md)
+    - [Node](/1주차/학습키워드/Node.md)
     - [NPM](/1주차//학습키워드/Npm.md)
     - [ES Modules vs CommonJS](/1주차/학습키워드/modules.md)
 
