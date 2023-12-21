@@ -234,6 +234,10 @@ DOM은 업데이트가 발생할 때마다 실제 DOM에 반영하지만, `React
 
 
 
+#### 리액트는 왜 선언적인 문법이라고 할까???&#x20;
+
+바로 JSX 때문이다. JSX는 XML을 확장한 자바스크립트 문법으로 우리가 화면의 UI를 구성할 수 있게 도와준다. 하지만 그 내부는 복잡한 원리로 이루어져 있음에도 불구하고 우리가 그 개념을 모두 이해하지 못해도 사용하는 데에는 전혀 지장이 없다. 예를 들어 JSX로 선언된 문법은 트랜스파일러를 만나면 React.creatElement()문법으로 변환된다. 여기서 React element는 React element Tree에 하나의 노드이다. 노드를 생성한다고 바로 실제 DOM에 적용되는 것은 아니다. 컴포넌트의 state와 props의 변화가 감지되어 render()함수가 호출이 되면 React element Tree를 VDOM이란 메모리상의 DOM의 복사본 형태로 표현이된다. 이후 이전에 생성한 VDOM이 존재하면 비교하여 변화가 일어난 부분의 트리만 잘라 실제 DOM와 동기화 한다. 우리 이런 리액트의 핵심 개념을 몰라도 JSX문법을 이용하여 선언만 하면 화면을 그리고 조작 할 수 있다.&#x20;
+
 ***
 
 > [Understanding Reflow and Repaint in the browser](https://dev.to/gopal1996/understanding-reflow-and-repaint-in-the-browser-1jbg)
