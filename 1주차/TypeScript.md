@@ -4,11 +4,11 @@
 
 ***
 
-사용자가 코드를 입력하면 그 코드를 즉시 평가하고 출력하는 대화형 프로그래밍 환경]
+사용자가 코드를 입력하면 그 코드를 즉시 평가하고 출력하는 대화형 프로그래밍 환경
 
 * **Read**: 코드를 입력받는다.
 * **Eval** : 코드를 평가 (실행)한다.
-* **Print**: 평가된 결과를 사용자에게 출려가한다.(결과, 오류메시지등)
+* **Print**: 평가된 결과를 사용자에게 출한다.(결과, 오류메시지등)
 * **Loop**: 위의 과정을 반복한다.\
   EX: JavaScript의 Node.js 콘솔, 브라우저 개발도구
 
@@ -151,6 +151,6 @@ type ColorfulCircle = Colorful & Circle;
 
 ***
 
-https://www.samsungsds.com/kr/insights/typescript.html
+[https://www.samsungsds.com/kr/insights/typescript.html](https://www.samsungsds.com/kr/insights/typescript.html)
 
-https://joshua1988.github.io/ts/why-ts.html
+[https://joshua1988.github.io/ts/why-ts.html](https://joshua1988.github.io/ts/why-ts.html)

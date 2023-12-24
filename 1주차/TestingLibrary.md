@@ -50,6 +50,6 @@ React 컴포넌트를 테스트 하기 위한 UI테스트에 특화된 라이브
 
 ***
 
-https://adjh54.tistory.com/305#3\
+[https://adjh54.tistory.com/305#3](https://adjh54.tistory.com/305#3)\
 [https://kooku0.github.io/blog/프론트엔드에서-테스트코드 짜기/](https://kooku0.github.io/blog/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%EC%97%90%EC%84%9C-%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BD%94%EB%93%9C%20%EC%A7%9C%EA%B8%B0/)\
-https://testing-library.com/docs/react-testing-library/intro/
+[https://testing-library.com/docs/react-testing-library/intro/](https://testing-library.com/docs/react-testing-library/intro/)
