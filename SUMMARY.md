@@ -23,4 +23,6 @@
 * [3주차](dev/3/README.md)
   * [ReactState](3주차/ReactState.md)
     * [RestAPI](3주차/학습키워드/RestAPI.md)
+    * [JSON](3주차/학습키워드/Json.md)
+    * [DeclarativeProgramming](3주차/학습키워드/Declarative.md)
   * [ReactComponent](3주차/ReactComponent.md)
