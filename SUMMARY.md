@@ -25,4 +25,5 @@
     * [RestAPI](3주차/학습키워드/RestAPI.md)
     * [JSON](3주차/학습키워드/Json.md)
     * [DeclarativeProgramming](3주차/학습키워드/Declarative.md)
+    * [SRP](3주차/학습키워드/SRP.md)
   * [ReactComponent](3주차/ReactComponent.md)
