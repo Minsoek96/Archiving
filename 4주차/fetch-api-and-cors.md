@@ -2,9 +2,7 @@
 
 ## FetchAPI
 
-웹 브라우저에서 리소스를 비동기적으로 가져오는 기능을 제공하는 JavaScript인터페이스&#x20;
-
-
+웹 브라우저에서 리소스를 비동기적으로 가져오는 기능을 제공하는 JavaScript인터페이스&
 
 ### 역사 및 필요성
 
@@ -12,14 +10,14 @@
 
 ### 특징
 
-**Promise 기반** : fetchAPI는 자바스크립트의 Promise를 반환한다.\
-**유연성** :  다양한 유형의 요청과 데이터 포맷을 지원하며, 헤더, 쿼리, 매개변수 캐시 전략등을 설정할 수 있다.\
-**CORS** : CORS에 대한 처리를 지원한다.\
-**스트림 응답** : 결과를 스트림으로 처리할 수 있어 큰 데이터를 처리하는 경우 유용하다.
+> **Promise 기반** : fetchAPI는 자바스크립트의 Promise를 반환한다.  
+> **유연성** : 다양한 유형의 요청과 데이터 포맷을 지원하며, 헤더, 쿼리, 매개변수 캐시 전략등을 설정할 수 있다.  
+> **CORS** : CORS에 대한 처리를 지원한다.  
+> **스트림 응답** : 결과를 스트림으로 처리할 수 있어 큰 데이터를 처리하는 경우 유용하다.
 
 ## Promise
 
-javaScript에서 Promise는 비동기 연산의 결과를 나타내는 객체\
+javaScript에서 Promise는 비동기 연산의 결과를 나타내는 객체  
 Promise는 비동기 작업이 성공적으로 끝났을 때 결과 값을 처리하거나, 실패했을 때 오류를 처리하는 방법을 제공한다.
 
 ### Promise의 등장배경
@@ -30,11 +28,11 @@ Promise는 비동기 작업이 성공적으로 끝났을 때 결과 값을 처�
 
 상태 : Promise는 세 가지 상태를 가진다.
 
-* Pending(대기 중) : 초기 상태, 비동기 처리가 아직 완료되지 않음
-* Fulfilled(이행됨) : 연산이 성공적으로 완료됨&#x20;
-* Rejected(거부됨) : 연산이 실패함
+- Pending(대기 중) : 초기 상태, 비동기 처리가 아직 완료되지 않음
+- Fulfilled(이행됨) : 연산이 성공적으로 완료됨
+- Rejected(거부됨) : 연산이 실패함
 
-**불변성** : 한번 fullfilled 나 Rejected 같은 상태가 되면, 그 상태로 고정된다.&#x20;
+**불변성** : 한번 fullfilled 나 Rejected 같은 상태가 되면, 그 상태로 고정된다.
 
 **체이닝** : Promise는`.then()`,`.catch()`, `.finally()`메소드를 사용하여 연속적인 비동기 작업을 쉽게 처리할 수 있다.
 
@@ -53,22 +51,19 @@ let promise = new Promise((resolve, rejeted) => {
     });
 ```
 
-
-
 ## ReableStream
 
-데이터를 조각별로 읽을 수 있는 인터페이스 \
-데이터를 메모리에 한 번에 모두 로드하지 않고 조금씩 읽을 수 있어, 큰 크기의 데이터를 효율적으로 처리할 수 있다.\
-
+데이터를 조각별로 읽을 수 있는 인터페이스  
+데이터를 메모리에 한 번에 모두 로드하지 않고 조금씩 읽을 수 있어, 큰 크기의 데이터를 효율적으로 처리할 수 있다.  
 
 ```javascript
-fetch('http://localhost:3000/products');
+fetch("http://localhost:3000/products");
 // → Promise
 
-await fetch('http://localhost:3000/products');
+await fetch("http://localhost:3000/products");
 // → Response
 
-const response = await fetch('http://localhost:3000/products');
+const response = await fetch("http://localhost:3000/products");
 // → response.body는 ReadableStream
 
 const reader = response.body.getReader();
@@ -82,8 +77,6 @@ const body = new TextDecoder().decode(chunk.value);
 const data = JSON.parse(body);
 ```
 
-
-
 ## Unicode
 
 유니코드(Unicode)는 전 세계의 모든 문자를 공통된 코드로 표현하기 위해 만들어진 국제 표준이다.
@@ -92,13 +85,14 @@ const data = JSON.parse(body);
 
 ## CORS란
 
-교차 출처 리소스 공유 \
-출처를 구성하는 세 요소는 프로토콜 - 도메인(호스트이름)-포트로( Origin), 이중 하나라도 다르면 CORS 에러를 만나게 된다.
+교차 출처 리소스 공유  
+출처를 구성하는 세 요소는 프로토콜 - 도메인(호스트이름)-포트로( Origin),  
+이중 하나라도 다르면 CORS 에러를 만나게 된다.
 
 <figure><img src="../../.gitbook/assets/cors.png" alt=""><figcaption></figcaption></figure>
 
-CORS를 설정한다는 건 출처가 다른 서버 간의 리소스 공유를 허용한다는것\
-SOP가 서로 다른 출처일 때 리소스 요청과 응답을 차단하는 정책
+CORS를 설정한다는 건 출처가 다른 서버 간의 리소스 공유를 허용한다는것  
+SOP가 서로 다른 출처일 때 리소스 요청과 응답을 차단하는 정책  
 
 > 우리를 머리 아프게 하는 정책은 SOP정책이고 CORS는 SOP의 제한을 안전한 방식으로 완화할 수 있는 정책이다.
 
