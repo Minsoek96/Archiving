@@ -35,5 +35,4 @@
 * [5주차](dev/5/README.md)
   * [TDD](5주차/TDD.md)
   * [ReactTestingLibrary](5주차/ReactTestingLibrary.md)
-  * [MSW](5주차/ServiceWokerAPI.md)
-  
+  * [ServiceWorker](5주차/ServiceWokerAPI.md)
