@@ -2,6 +2,8 @@
 
 ## React Hook이란 ?
 
+***
+
 React Hooks는 React 16.8 버전에서 도입된 기능으로, 함수형 컴포넌트에서 상태(state)와 생명주기(lifecycle) 같은 React 기능들을 hook 할 수 있게 해주는 함수들이다.
 
 \*hook : 연동
@@ -12,14 +14,14 @@ React Hooks는 2018년 React팀에 의해 소개되었다. 그 전까지는 상�
 
 **필요성** : Hooks는 여러 가지 문제를 해결하기 위해 도입되었다.
 
-**WraaperHell( Highr-order Components, HOC)**  
-= 여러 계층의 컴포넌트를 감싸여 재사용 로직의 문제를 해결 할 수 있었지만, 가독성이 떨어지고 구조가 매우 복잡해지는 문제가 발생
+**WraaperHell( Highr-order Components, HOC)**\
+\= 여러 계층의 컴포넌트를 감싸여 재사용 로직의 문제를 해결 할 수 있었지만, 가독성이 떨어지고 구조가 매우 복잡해지는 문제가 발생
 
-**Huge Components**  
-= 생명주기 메서드를 통해 상태관리, 데이터 로딩, 이벤트 리스닝 등을 처리하여 관련없는 로직들이 여러 메소드에 걸쳐 있어 컴포넌트를 복잡하게 만들었다.
+**Huge Components**\
+\= 생명주기 메서드를 통해 상태관리, 데이터 로딩, 이벤트 리스닝 등을 처리하여 관련없는 로직들이 여러 메소드에 걸쳐 있어 컴포넌트를 복잡하게 만들었다.
 
-**Confusing Classes**  
-= this 키워드의 동작의 이해나, 복잡한 생명주기 메서드, 클래스 문법의 어려움이 혼란을 가져온다.
+**Confusing Classes**\
+\= this 키워드의 동작의 이해나, 복잡한 생명주기 메서드, 클래스 문법의 어려움이 혼란을 가져온다.
 
 Hooks는 이러한 문제들을 해결하여, 코드의 재사용성을 높이고, 컴포넌트를 더 쉽게 이해하고 사용할 수 있게 만들어준다.
 
@@ -27,15 +29,17 @@ Hooks는 이러한 문제들을 해결하여, 코드의 재사용성을 높이�
 
 **상태 관리** : `useState`를 사용하여 상태를 관리할 수 있다.\
 **사이드 이펙트 처리** : `useEffect`를 사용하여 데이터 가져오기, 구독설정, 수동으로 DOM 조작과 같은 `side effets`를 처리한다.\
-**코드 재사용과 로직 공유** : 사용자 정의 Hook을 통해 컴포넌트 간에 상태 관련 로직을 쉽게 재사용할 수 있다.&#x20;
+**코드 재사용과 로직 공유** : 사용자 정의 Hook을 통해 컴포넌트 간에 상태 관련 로직을 쉽게 재사용할 수 있다.
 
 ## useState
 
-상태를 관리 할 수 있는 훅  
+***
+
+상태를 관리 할 수 있는 훅\
 `const [state, setState] = useState(initiaState)`
 
-- state는 현재의 상태를 나타낸다.
-- set함수를 사용하면 상태를 다른 값으로 업데이트하고 렌더링을 다시 트리거 할 수 있다.
+* state는 현재의 상태를 나타낸다.
+* set함수를 사용하면 상태를 다른 값으로 업데이트하고 렌더링을 다시 트리거 할 수 있다.
 
 React의 state는 배치업데이트 방식을 통해 처리된다.
 
@@ -61,6 +65,8 @@ setNumber(42);
 
 ## useEffect
 
+***
+
 React의 함수형 컴포넌트에서 Side effects을 처리하기 위해 사용되는 훅
 
 > Effect를 사용하면 렌더링 이후 일부 코드를 실행할 수 있으므로 컴포넌트를 React외부의 시스템과 동기화할 수 있다.
@@ -71,17 +77,17 @@ props나 state가 변경될 때 컴포넌트의 state를 업데이트하려는 �
 
 ### 이유
 
-effect는 렌더링 이후에 발생한다. 하지만 React에서 렌더링은 state나 props가 변했다는 것을 의미한다.  
+effect는 렌더링 이후에 발생한다. 하지만 React에서 렌더링은 state나 props가 변했다는 것을 의미한다.\
 단순 렌더링을 위해 state를 변화시켜 effect를 발생시킨다면 두번의 렌더링을 발생시키는 비효율적인 계산이 된다.
 
-사용자 이벤트를 처리하는 데에는 Effect가 필요하지 않다.  
+사용자 이벤트를 처리하는 데에는 Effect가 필요하지 않다.\
 이벤트 핸들러에서는 정확히 어떤 일이 일어났는지 알 수 있지만 effect는 사용자가 무엇을 했는지를 알 수 없다.
 
 React에서 렌더링은 JSX의 순수한 계산이어야 한다. DOM 수정과 같은 사이드 이펙트를 포함해서는 안된다.
 
 ### 의존성
 
-기본적으로 Effect는 매번 렌더링 후에 실행된다.  
+기본적으로 Effect는 매번 렌더링 후에 실행된다.\
 의존성 배열을 지정하면 매번 렌더링 후에 실행되지 않고 의존성 배열의 상태가 변경이되면 실행이 된다.
 
 ```jsx
@@ -107,6 +113,8 @@ React는 Effect가 다시 실행되기 전에 매번 클린업 함수를 호출�
 
 ## useContext
 
+***
+
 컴포넌트에서 context를 읽고 구독할 수 있게 해주는 ReactHook이다.
 
 ### context란
@@ -114,9 +122,9 @@ React는 Effect가 다시 실행되기 전에 매번 클린업 함수를 호출�
 React를 사용하다보면 부모 컴포넌트에서 하위 컴포넌트로 prop을 전달하는 과정의 tree가 깊어지면 중간에 여러 컴포넌트를 거쳐야 하므로 불편해질 수 있다. 이러한 현상을 prop drilling이라고 한다.\
 context는 부모컴포넌트의 자식 컴포넌트에게 직접 상태를 전파 할 수 있는 방법이다.
 
-<figure><img src="../../.gitbook/assets/before.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/before.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/after.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/after.png" alt=""><figcaption></figcaption></figure>
 
 ### step 1 : Create the context
 
@@ -159,12 +167,14 @@ Context를 활용하면 PropsDrilling 문제와 효율적인 lifting stateup을 
 
 ## useRef
 
+***
+
 컴포넌트의 생애주기 전체에 걸쳐서 유지되는 객체. 즉, 컴포넌트가 없어질 때 까지 동일한 객체가 유지된다.
 
-useRef는 단일 프로퍼티를 가진 객체를 반환한다.  
+useRef는 단일 프로퍼티를 가진 객체를 반환한다.\
 current : 처음에는 전달한 initValue로 설정된다. 나중에 다른 값으로 바꿀 수 있다. ref 객체를 JSX 노드의 ref속성으로 React에 전달하면 React는 current 프로퍼티를 설정한다.
 
-Ref는 바뀌어도 렌더링에 영향을 주지 않는다.  
+Ref는 바뀌어도 렌더링에 영향을 주지 않는다.\
 useRef를 사용하여 DOM요소에 직접 접근 할 수 있다.
 
 > 초기화를 제외하고는 렌더링 중에 ref.current를 쓰거나 읽지마세요. 이렇게 하면 컴포넌트의 동작을 예측할 수 없게 됩니다.
@@ -172,6 +182,8 @@ useRef를 사용하여 DOM요소에 직접 접근 할 수 있다.
 대신 이벤트 핸들러나 effect에서 ref를 읽거나 쓸 수 있다.
 
 ## useLayoutEffect
+
+***
 
 브라우저가 화면을 다시 그리기전에 실행 되는 useEffect
 
