@@ -2,15 +2,16 @@
 
 ## 관심사 분리(separation of concerns, SOC)
 
+---
 > 책임과 역할에 따라 명확하게 코드를 분리하는 디자인 원칙  
 
 각각의 코드가 특정한 책임이나 역할을 가짐으로써, 전체 시스템의 코드의 가독성와 유지보수의 편의성을 높이기 위한 목적으로 사용된다.  
 
 관심사를 적절하게 분리한다면 코드는 서로 독립적으로 동작할 수 있다.
 
-
 ## Layered Architecture  
 
+---
 > 각 계층 마다 특정 역할과 관심사를 가지는 구조이다.  
 구성되는 숫자에 따라 N계층 아키텍처 (N-tier Architecture) 라고도 한다.
 
@@ -42,6 +43,7 @@ MySQL, MariaDB, PostgreSQL, MongoDB 등 데이터베이스가 위치한 계층�
 
 ## Flux Architecture  
 
+---
 >React와 함께 사용되며 Facebook에서 MVC의 2-way-binding의  
 패턴의 복잡성와 관리 문제를 해결하기 위해  
 데이터 흐름을 단방향으로 관리하는 것을 목적으로 제작된 아키텍처
@@ -77,6 +79,7 @@ Dispatcher에게 Action전달
 
 ## useReducer  
 
+---
 > useReducer는 컴포넌트에 reducer를 추가할 수 있는 Hook  
 
 ```jsx
@@ -118,4 +121,15 @@ const [state, dispatch] = useReducer(reducer, {count: 0});
 
 ## useCallback  
 
+---
 > 리렌더링 사이에서 함수 정의를 캐시할 수 있게 해주는 React훅
+
+```jsx
+const cachedFn = useCallback(fn, dependencies)
+```
+
+`fn` : 캐시하려는 함수  
+-> 마지막 렌더링 이후 `depdencies`가 변경되지 않았다면 동일한 함수를 다시 제공한다.  
+ 
+`dependencies` : 의존성 배열  
+-> React는 `object.io` 비교 알고리즘을 사용하여 각 의존성을 이전 값과 비교한다.
