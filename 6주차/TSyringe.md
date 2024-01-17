@@ -101,4 +101,49 @@ class Example {
 
 console.log(Reflect.getMetadata("customMetadataKey", new Example(), "method"));
 ```
+
 Reflect.metadata 데코레이터를 사용하여 메소드에 메타데이터를 추가하고, Reflect.getMetadata를 통해 해당 메타데이터를 조회한다.
+
+## singleton(싱글톤)
+
+---
+> 싱글톤 패턴은 특정 클래스의 인스턴스를 1개만 생성되는 것을 보장하는 디자인 패턴이다.
+
+### 핵심개념 
+
+싱글톤 클래스는 전역적으로 단 하나의 인스턴스만 존재한다.  
+어디서든 해당 인스턴스에 접근할 수 있어 전역적인 접근점을 제공한다.  
+싱글톤은 자신의 생성과 생명주기를 스스로 관리한다.  
+
+### 장점  
+
+인스턴스를 생성할 때 마다 메모리가 낭비되는데 반복적으로 생성하지 않아 메모리를 절약할 수 있다. 또한 공유 자원에 대한 접근을 관리할 수 있다.  
+
+### 단점  
+
+글로벌 상태가 코드의 결합도를 높이고 단위 테스트를 어렵게 만든다. 
+
+```jsx 
+var Singleton = (function () {
+	var instance;
+
+	function createInstance() {
+		var object = new Object("I am the instance");
+		return object;
+	}
+	
+	return {
+		 getInstance: function() {
+				if (!instance) {
+						instance = createInstance();
+				}
+				return instance;
+		}
+};
+}) ();
+
+var instance1 = Singleton.getInstance();
+var instance2 = Singleton.getInstance();
+console.log(instance1 === instance2);  // true
+
+```
