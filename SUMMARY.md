@@ -39,6 +39,6 @@
   * [E2E(End to End)](5주차/E2E.md)
 * [6주차](dev/6/README.md)
   * [ExternalStore](6주차/ExternalStore.md)
-  * [LayeredArchitecture](6주차/LayeredArchitecture.md)
+  * [TSyringe](6주차/TSyringe.md)
   * [useCallback](6주차/useCallback.md)
   * [useReducer](6주차/useReducer.md)
