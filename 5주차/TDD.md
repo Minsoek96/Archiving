@@ -2,6 +2,8 @@
 
 ## TDD(Test Driven Development)
 
+***
+
 > 테스트 코드를 먼저 작성하는, 즉 구현보다 인터페이스와 스펙을 먼저 정의함으로써 개발을 진행하는 방식
 
 ### TDD Cycle
@@ -42,9 +44,12 @@ greet("evening", "Bob");
 
 ## JEST
 
-자바스크립트 테스트 프레임워크\
-쉬운 설정과 mocking 기능, watch mode, code coverage 기능을 제공하여 JavaScript 코드의 테스트를 강력하게 지원 한다
+***
 
+자바스크립트 테스트 프레임워크\
+
+
+쉬운 설정과 mocking 기능, watch mode, code coverage 기능을 제공하여 JavaScript 코드의 테스트를 강력하게 지원 한다\
 바벨이나 리액트 다양한 환경에서 사용가능
 
 **테스트 케이스를 정의할 때 크게 두 가지 방법으로 사용한다.**
@@ -53,6 +58,8 @@ greet("evening", "Bob");
 > BDD스타일로 주체 - 행위 중심으로 테스트를 조직화하는 방식
 
 ## Describe-Context-It 패턴
+
+***
 
 테스트 대상에 대해 좀 더 섬세하게 설명하는 방식\
 **Describe**: 설명할 테스트 대상을 명시\
