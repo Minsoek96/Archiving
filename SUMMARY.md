@@ -42,3 +42,6 @@
   * [TSyringe](6주차/TSyringe.md)
   * [Redux](6주차/Redux.md)
   * [useReducer](6주차/useReducer.md)
+* [7주차](dev/7/README.md)  
+  * [HTML_DOM_API](7주차/HTML_DOM_API.md)
+  * [Router](7주차/Router.md)
