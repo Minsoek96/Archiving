@@ -46,3 +46,4 @@
   * [HTML_DOM_API](7주차/HTML_DOM_API.md)
   * [Router](7주차/Router.md)
   * [RouterProvider](7주차/RouterProvider.md)
+  * [WebAPIsHistory](7주차/WebAPIsHistory.md)
