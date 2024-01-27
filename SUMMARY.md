@@ -29,6 +29,7 @@
   * [ReactState](3주차/ReactState.md)
 * [4주차](dev/4/README.md)
   * [Express](4주차/express.md)
+  * [RestAPI](4주차/RestAPI.md)
   * [Fetch API & CORS](4주차/fetch-api-and-cors.md)
   * [React Hooks](4주차/react-hooks.md)
   * [Ref & CustomHook](4주차/ref&CustomHook.md)

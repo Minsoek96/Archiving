@@ -8,57 +8,43 @@ Re-rendering의 목적으로 사용된다.
 
 ## React Sate의 조건
 
-***
+---
 
 1. 변경돼야 한다. 변경되지 않는 건 state로 다룰 가치가 없다.
 2. 부모 컴포넌트가 props를 통해 전달한다면 state가 아니다.
 3. 다른 state나 props를 이용해 계산 가능하다면 state가 아니다.
 
-
-
 ## DRY 원칙(Don't repeat yourself)
 
-***
+---
 
 중복을 피하고 코드를 재사용하는 원칙
 
 반복되는 코드를 줄이고, 자주 변하는 코드는 추상화를 최소화하고 데이터는 한 곳에서 관리하여 가독성을 높이고 유지보수성의 이점을 챙긴다.
 
-
-
-
-
 ## SSOT(Single Source of Truth)
 
-***
+---
 
 단일 진실 공급원(SSOT) 모든 비즈니스 데이터를 하나에 공간에 저장하는 것
 
 리액트는 특히나 단방향의 흐름으로 데이터가 흐르기 때문에 상태를 공통 부모컴포넌트에서 관리하면 상태가 여러곳에 분산되는 것을 방지하고, 컴포넌트 간에 예측 가능한 데이터 흐름을 만들 수 있다.
 
-
-
-
-
 ## lifting State Up
 
-***
+---
 
 두 컴포넌트의 상태를 동시에 처리해야 하는 상황에 개별적으로 관리하는 상태를 지우고 가장 가까운 공통 부모 컴포넌트에서 상태를 관리하고 props로 전달하는 방법
 
-
-
-
-
 ## useState
 
-***
+---
 
-함수형 컴포넌트에서 상태를 관리 할 수 있는 훅\
+함수형 컴포넌트에서 상태를 관리 할 수 있는 훅
 `const [state, setState] = useState(initialState)`
 
-* state는 현재의 상태를 나타낸다.
-* set함수를 사용하면 상태를 다른 값으로 업데이트하고 렌더링을 다시 트리거 할 수 있다.
+- state는 현재의 상태를 나타낸다.
+- set함수를 사용하면 상태를 다른 값으로 업데이트하고 렌더링을 다시 트리거 할 수 있다.
 
 **React의 state는 배치업데이트 방식을 통해 처리된다.**
 
@@ -69,7 +55,7 @@ state 변수를 설정하면 다음 렌더링이 큐에 들어간다.
 ```jsx
 setNumber(number + 5);
 // 현재의 state에서 +5를 한다.
-setNumber(n => n + 1);
+setNumber((n) => n + 1);
 // n => n + 1업데이터 함수이므로 큐에 추가한다.
 setNumber(42);
 // state를 42로 교체한다.
@@ -84,11 +70,9 @@ setNumber(42);
 > 업데이트 함수는 렌더링중에 발생하므로 순수해야하고 결과만 반환해야한다.\
 > 업데이트 함수 내부에서 다른 state를 변경하거나 다른 사이드 이펙트를 실행하면 안된다.
 
-
-
 ## 1급 객체(first-class object)란?
 
-***
+---
 
 객체가 일반 변수처럼 아무런 제약 없이 모든 연산들이 가능하다는 의미
 
@@ -99,7 +83,7 @@ setNumber(42);
 
 > 자바스크립트의 함수는 일급객체이다.
 
-***
+---
 
 https://experience.dropbox.com/ko-kr/resources/source-of-truth\
 https://react-ko.dev/learn/queueing-a-series-of-state-updates
