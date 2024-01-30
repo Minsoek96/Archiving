@@ -50,3 +50,5 @@
   * [WebAPIsHistory](7주차/WebAPIsHistory.md)
 * [8주차](dev/8/README.md)
   * [DesignSystem](8주차/DesignSystem.md)
+  * [Style Basic](8주차/StyleBasic.md)
+  * [CSSInJS](8주차/CSSinJS.md)
