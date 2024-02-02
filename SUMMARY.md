@@ -53,4 +53,4 @@
   * [Style Basic](8주차/StyleBasic.md)
   * [CSSInJS](8주차/CSSinJS.md)
   * [StyleComponents](8주차/StyleComponents.md)
-  * [GlobalStyle&Theme](8주차/GlobalStyle&Theme.md.md)
+  * [GlobalStyle&Theme](8주차/GlobalStyle&Theme.md)
