@@ -45,7 +45,7 @@ npm i -D eslint
 npx eslint --init
 ```
 
-<figure><img src="../dev/1/setting.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../dev/1/setting.png" alt=""/></figure>
 
 ### 6. `.eslintrc.js` 파일 수정
 
@@ -56,8 +56,8 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-// ...(후략)...
-}
+  // ...(후략)...
+};
 ```
 
 **7. `.eslintignore` 파일 작성**
@@ -176,7 +176,7 @@ npm i -D parcel
 </html>
 ```
 
-* `src/main.tsx`
+- `src/main.tsx`
 
 ```tsx
 import ReactDOM from "react-dom/client";
@@ -196,7 +196,7 @@ function main() {
 main();
 ```
 
-* `src/App.tsx`
+- `src/App.tsx`
 
 ```tsx
 import React from "react";
@@ -211,7 +211,7 @@ const App = () => (
 export default App;
 ```
 
-* `src/App.test.tsx`
+- `src/App.test.tsx`
 
 ```tsx
 function add(x: number, y: number): number {
@@ -223,7 +223,7 @@ test("숫자더하기", () => {
 });
 ```
 
-* `src/components/Greeting.test.tsx`
+- `src/components/Greeting.test.tsx`
 
 ```tsx
 import { render, screen } from "@testing-library/react";
@@ -235,7 +235,7 @@ test("Greeting", () => {
 });
 ```
 
-* `src/components/Greeting.tsx`
+- `src/components/Greeting.tsx`
 
 ```tsx
 import React from "react";
