@@ -45,7 +45,7 @@ npm i -D eslint
 npx eslint --init
 ```
 
-![설정.PNG](../setting.png)
+<figure><img src="../dev/1/setting.png" alt=""><figcaption></figcaption></figure>
 
 ### 6. `.eslintrc.js` 파일 수정
 
