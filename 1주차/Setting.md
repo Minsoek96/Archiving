@@ -45,7 +45,7 @@ npm i -D eslint
 npx eslint --init
 ```
 
-<figure><img src="../dev/1/setting.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/설정.PNG" alt=""><figcaption></figcaption></figure>
 
 ### 6. `.eslintrc.js` 파일 수정
 
@@ -128,7 +128,7 @@ Warning: React version not specified in eslint-plugin-react settings.
 See https://github.com/jsx-eslint/eslint-plugin-react#configuration .
 ```
 
-eslint-plugin-react 설정에서 React버전이 지정되지 않았음을 나타낸다. \
+eslint-plugin-react 설정에서 React버전이 지정되지 않았음을 나타낸다.\
 간단하다. `eslintrc.js`버전을 설정해주면 해결된다.
 
 ```tsx
@@ -176,7 +176,7 @@ npm i -D parcel
 </html>
 ```
 
-- `src/main.tsx`
+* `src/main.tsx`
 
 ```tsx
 import ReactDOM from "react-dom/client";
@@ -196,7 +196,7 @@ function main() {
 main();
 ```
 
-- `src/App.tsx`
+* `src/App.tsx`
 
 ```tsx
 import React from "react";
@@ -211,7 +211,7 @@ const App = () => (
 export default App;
 ```
 
-- `src/App.test.tsx`
+* `src/App.test.tsx`
 
 ```tsx
 function add(x: number, y: number): number {
@@ -223,7 +223,7 @@ test("숫자더하기", () => {
 });
 ```
 
-- `src/components/Greeting.test.tsx`
+* `src/components/Greeting.test.tsx`
 
 ```tsx
 import { render, screen } from "@testing-library/react";
@@ -235,7 +235,7 @@ test("Greeting", () => {
 });
 ```
 
-- `src/components/Greeting.tsx`
+* `src/components/Greeting.tsx`
 
 ```tsx
 import React from "react";
