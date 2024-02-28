@@ -62,3 +62,4 @@
 * [11주차](dev/11/README.md)
   * [Generics](11주차/Generics.md)
   * [UtillityTypes](11주차/UtilityTypes.md)
+  * [BasicsTS](11주차/BasicsTS.md)
