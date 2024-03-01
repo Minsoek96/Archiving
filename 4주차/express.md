@@ -8,9 +8,9 @@ Express는 "Node.js 기반의 웹 애플리케이션 프레임워크로 개발�
 
 ### 역사
 
-Express는 2010년 TJ Holowaychuk에 의해 처음 출시되었다.
+Express는 2010년 TJ Holowaychuk에 의해 처음 출시되었다.  
 Node.js 자체는 낮은 수준의 API를 제공하며, 여러 기본적인 웹 서버 기능을 직접 구현 해야 한다.\
-Express는 이러한 복잡성을 추상화하고, 라우팅, 미들웨어, 템플릿 렌더링 등과 같은 고급 기능을 제공하여,\
+Express는 Node.js의 복잡성을 추상화하고, 라우팅, 미들웨어, 템플릿 렌더링 등과 같은 고급 기능을 제공하여,\
 개발자가 보다 효율적으로 웹 애플리케이션을 구축할 수 있도록 도와준다.
 
 ### 특징
@@ -18,8 +18,28 @@ Express는 이러한 복잡성을 추상화하고, 라우팅, 미들웨어, 템�
 라우팅\
 : URL 경로와 HTTP 메소드별로 요청을 처리할 수 있는 간결한 API를 제공한다.
 
+```jsx
+app.get('/user', function(req, res) {
+    res.send('User page');
+});
+
+app.post('/user', function(req, res) {
+    // 사용자 추가 로직
+    res.send('User added');
+});
+```
+
 미들웨어 지원\
 : 요청과 응답 사이에서 실행되는 함수를 사용하여 애플리케이션의 기능을 확장할 수 있다.
+
+```jsx
+app.use(express.json()); // 요청 본문을 JSON으로 파싱하는 미들웨어
+
+app.use(function(req, res, next) {
+  console.log('Time:', Date.now());
+  next(); // 다음 미들웨어 또는 라우터로 제어를 넘깁니다.
+});
+```
 
 템플릿 엔진\
 : Pug, EJS와 같은 다양한 템플릿 엔진을 지원하여 서버 사이드에서 HTML을 동적으로 생성할 수 있다.
