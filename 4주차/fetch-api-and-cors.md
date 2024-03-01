@@ -13,9 +13,24 @@
 ### 특징
 
 > **Promise 기반** : fetchAPI는 자바스크립트의 Promise를 반환한다.\
-> **유연성** : 다양한 유형의 요청과 데이터 포맷을 지원하며, 헤더, 쿼리, 매개변수 캐시 전략등을 설정할 수 있다.\
+> **유연성** : 요청과 응답 모두에 대한 세부 설정이 가능하여, 헤더 설정, 캐시 제어, CORS설정 등을 유연하게 처리할 수 있다.  
 > **CORS** : CORS에 대한 처리를 지원한다.\
 > **스트림 응답** : 결과를 스트림으로 처리할 수 있어 큰 데이터를 처리하는 경우 유용하다.
+
+```jsx
+fetch('https://api.example.com/data', {
+  method: 'POST', // HTTP 메서드 설정
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    key: 'value'
+  }) // 요청 본문
+})
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+```
 
 ## Promise
 
@@ -83,6 +98,8 @@ const body = new TextDecoder().decode(chunk.value);
 const data = JSON.parse(body);
 ```
 
+> 대량의 데이터를 처리할 때는 위와같은 방법이 매우 유용하지만, 단순 JSON 데이터를 다루는 경우는 .json()메소드가 기본으로 데이터를 읽을수 있게 지원을 해준다. 
+
 ## Unicode
 
 ***
@@ -95,22 +112,68 @@ const data = JSON.parse(body);
 
 ***
 
-교차 출처 리소스 공유\
-출처를 구성하는 세 요소는 프로토콜 - 도메인(호스트이름)-포트로( Origin),\
+교차 출처 리소스 공유
+
+> 웹페이지가 다른 도메인의 리소르를 안전하게 요청할 수 있도록 하는 메커니즘이다.  
+
+출처를 구성하는 세 요소는 프로토콜 - 도메인(호스트이름)-포트로( Origin),  
 이중 하나라도 다르면 CORS 에러를 만나게 된다.
 
 <figure><img src="../.gitbook/assets/cors.png" alt=""><figcaption></figcaption></figure>
 
-CORS를 설정한다는 건 출처가 다른 서버 간의 리소스 공유를 허용한다는것\
-SOP가 서로 다른 출처일 때 리소스 요청과 응답을 차단하는 정책
+CORS를 설정한다는 건 출처가 다른 서버 간의 리소스 공유를 허용한다는것  
+기본적으로 브라우저는 보안상의 이유로 SOP(Same-Origin Policy)이라는 정책을 적용하여 서로 다른 출처 일때 리소스의 요청에 대해서는 차단이 된다.
 
-> 우리를 머리 아프게 하는 정책은 SOP정책이고 CORS는 SOP의 제한을 안전한 방식으로 완화할 수 있는 정책이다.
+> CORS는 이러한 제한을 특정 조건하에 완하여 다른 출처에서 자원을 안전하게 요청할 수 있도록 하는 규칙과 절차를 진행한다. 우리의 머리를 CORS에러 때문에 머리가 아픈 이유는 CORS가 아닌 SOP정책 때문이다. 
 
-### 작동방식
+### 누가 출처 비교를 하는거야?  
+
+CORS의 출처를 비교하는 것은 서버에 구현된 스펙이 아닌 브라우저에서 구현된 스펙이다.  
+그래서 브라우저에는 에러가 뜨지만, 정작 서버 쪽에는 정상적으로 응답을 했다고 하기 때문에 난항을 겪는다. 즉, 응답 데이터는 멀쩡하지만 브라우저 단에서 받을수 없도록 차단을 한다.
+
+### 비교 동작 과정
+
+1. 클라이언트에서 HTTP요청의 헤더에 Origin을 담아 전달 
+2. 서버는 응답헤더에 Access-Control-Allow-Origin을 담아 클라이언트로 전달한다.
+3. 클라이언트에서 Origin과 서버가 보내준 Access-Control-Allow-Origin을 비교한다.
+
+
+### 해결책은 서버의 허용 
+
+결국 해결 방법은 서버측에서 Access-Control-Allow-Origin 헤더에 허용할 출처를 담아 클라이언트에 응답하면 된다.   
+
+### CORS의 작동 방식
+
+**예비요청(핵심)**
+: Default
+
+브라우저는 먼저 예비 요청을 보내 서버와 잘 통신되는지 확인한 후 본 요청을 보낸다. 
+이때 예비요청을 보내는 것을 Preflight라고 부르며, 이 예비요청의 HTTP 메소드를 GET 이나 POST가 아닌 `OPTIONS`가 사용된다는 것이 특징이다. 
 
 1. 브라우저는 먼저 리소스가 있는 서버에 사전 요청(pre-flight request)을 보낸다.
 2. 해당 요청은 서버가 교차 출처 요청을 허용하는지 확인하는데 사용된다.
 3. 서버가 적절한 CORS헤더로 응답하면 브라우저는 실제 요청을 보내고 리소스에 접근할 수 있다.
+
+### 예비 요청의 문제점과 캐싱 
+
+예비 요청은 특성상 네트워크 지연을 증가시켜 성능에 영향을 줄 수 있다.  
+성능 저하 문제를 완화하기 위해, 예비 요청의 결과를 캐싱하는 방법이 있다. 캐싱을 통해 동일한 출처로부터 동일한 리소스 요청이 발생할 때 예비 요청을 재수행하지 않고 캐시된 응답을 사용할 수 있다.  
+
+### 예비요청 캐싱 방법
+
+`Access-Control-Max-Age` 헤더 사용   
+서버가 예비 요청의 응답으로 `Access-Control-Max-Age` 헤더를 포함시킬 수 있다. 이 헤더는 브라우저가 예비 요청의 결과를 캐시할 수 있는 최대 시간을 지정한다. 
+
+### CORS 헤더
+
+`Access-Control-Allow-Origin`: 이 헤더는 리소스에 접근할 수 있는 출처를 지정한다.  
+특정 출처 또는 와일드카드 `*`를 값으로 가질 수 있다.  
+
+`Access-Control-Allow-Methods`: 실제 요청에서 허용되는 HTTP 메소드를 지정한다.  
+`Access-Control-Allow-Headers`: 실제 요청에서 사용할 수 있는 HTTP 헤더를 지정한다.  
+`Access-Control-Allow-Credentials`: 이 헤더는 자격 증명(쿠키 등)을 포함한 요청을 허용할지를 나타난다. 이 값을 `true`  
+
+### 정리 
 
 CORS는 주로 HTTP헤더를 사용하여 교차 출처 요청의 허용 여부를 전달한다. `Access-Control-Allow-Origin` 헤더는 특정 출처에서의 요청을 허용하거나 모든 출처를 허용하는 등의 설정을 할 수 있다.
 
