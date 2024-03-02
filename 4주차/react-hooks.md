@@ -2,7 +2,7 @@
 
 ## React Hook이란 ?
 
-***
+---
 
 React Hooks는 React 16.8 버전에서 도입된 기능으로, 함수형 컴포넌트에서 상태(state)와 생명주기(lifecycle) 같은 React 기능들을 hook 할 수 있게 해주는 함수들이다.
 
@@ -15,7 +15,7 @@ React Hooks는 2018년 React팀에 의해 소개되었다. 그 전까지는 상�
 **필요성** : Hooks는 여러 가지 문제를 해결하기 위해 도입되었다.
 
 **WraaperHell( Highr-order Components, HOC)**\
-\= 여러 계층의 컴포넌트를 감싸여 재사용 로직의 문제를 해결 할 수 있었지만, 가독성이 떨어지고 구조가 매우 복잡해지는 문제가 발생
+\= 여러 계층의 컴포넌트를 감싸여 재사용 로직의 문제를 해결 할 수 있었지만, 컴포넌트의 트리가 복잡해지고 유지보수가 어려워지는 문제가 발생했다.
 
 **Huge Components**\
 \= 생명주기 메서드를 통해 상태관리, 데이터 로딩, 이벤트 리스닝 등을 처리하여 관련없는 로직들이 여러 메소드에 걸쳐 있어 컴포넌트를 복잡하게 만들었다.
@@ -33,17 +33,22 @@ Hooks는 이러한 문제들을 해결하여, 코드의 재사용성을 높이�
 
 ## useState
 
-***
+---
 
 상태를 관리 할 수 있는 훅\
 `const [state, setState] = useState(initiaState)`
 
-* state는 현재의 상태를 나타낸다.
-* set함수를 사용하면 상태를 다른 값으로 업데이트하고 렌더링을 다시 트리거 할 수 있다.
+- state는 현재의 상태를 나타낸다.
+- set함수를 사용하면 상태를 다른 값으로 업데이트하고 렌더링을 다시 트리거 할 수 있다.
 
-React의 state는 배치업데이트 방식을 통해 처리된다.
+### 상태 업데이트의 비동기성
 
-> React는 state 업데이트를 하기 전에 이벤트 핸들러의 모든 코드가 실행될때까지 기다린다.
+React의 상태 업데이트는 `setState` 호출 후 상태 변경이 즉시 반영되지 않는다.  
+`setState`는 비동기적으로 동작한다. 최적의 렌더링을 위해 set함수를 호출한 후 모든 이벤트 핸들러가 실행되고 일괄 처리하게 된다.
+
+> state를 일괄처리 하여 단일 이벤트 중에 여러번 리렌더링 되는 것을 방지 할 수 있다.
+
+### 배치 업데이트
 
 state 변수를 설정하면 다음 렌더링이 큐에 들어간다.
 
@@ -65,7 +70,7 @@ setNumber(42);
 
 ## useEffect
 
-***
+---
 
 React의 함수형 컴포넌트에서 Side effects을 처리하기 위해 사용되는 훅
 
@@ -77,8 +82,7 @@ props나 state가 변경될 때 컴포넌트의 state를 업데이트하려는 �
 
 ### 이유
 
-effect는 렌더링 이후에 발생한다. 하지만 React에서 렌더링은 state나 props가 변했다는 것을 의미한다.\
-단순 렌더링을 위해 state를 변화시켜 effect를 발생시킨다면 두번의 렌더링을 발생시키는 비효율적인 계산이 된다.
+effect는 렌더링 이후에 발생한다. 하지만 React에서 렌더링은 state나 props가 변했다는 것을 의미한다. 단순 렌더링을 위해 state를 변화시켜 effect를 발생시킨다면 두번의 렌더링을 발생시키는 비효율적인 계산이 된다.
 
 사용자 이벤트를 처리하는 데에는 Effect가 필요하지 않다.\
 이벤트 핸들러에서는 정확히 어떤 일이 일어났는지 알 수 있지만 effect는 사용자가 무엇을 했는지를 알 수 없다.
@@ -111,9 +115,15 @@ useEffect(() => {
 
 React는 Effect가 다시 실행되기 전에 매번 클린업 함수를 호출하고컴포넌트가 마운트 해제 될 때 마지막으로 한 번 더 호출한다.
 
+### useEffect와 LifeCycleMethod
+
+1. 마운트 시 실행 : 컴포넌트가 마운트될 때(즉, 처음 화면에 나타날때)`useEffect` 내의 함수가 실행된다. 이는 `componentDidMount`와 유사한 동작이다.
+2. 의존성이 변경될 때 실행 : 의존성 배열이 지정된 값들 중 하나라도 변경되면, 업데이트가 발생한 후에 `useEffect`내의 함수가 실행된다. 이는 `componentDidUpdate`와 유사하다.
+3. 언마운트 시 또는 의존성이 변경되기 전에 실행 : `uesEffect`내에서 함수를 반환하면 반환된 함수는 컴포너트가 언마운트될 때 또는 `useEffect`가 다시 실행되기 전에 호출 된다. 이 반환 함수는 주로 리소스를 정리(cleanup)하는 데 사용된다.(예: 타이머 해제, 구독 취소 등)이는 `componentWillUnmount`와 유사한 동작이다. 
+
 ## useContext
 
-***
+---
 
 컴포넌트에서 context를 읽고 구독할 수 있게 해주는 ReactHook이다.
 
@@ -133,22 +143,10 @@ context는 부모컴포넌트의 자식 컴포넌트에게 직접 상태를 전�
 ```jsx
 import { createContext } from "react";
 
-export const LevelContext = createContext(1);
+export const LevelContext = createContext();
 ```
 
-### step 2 : Use the context
-
-: React와 context에서 `useContext` Hook을 가져온다.
-
-```jsx
-export default function childComponent {
-	const level = useContext(LevelContext);
-}
-```
-
-`useContext`는 React에게 자식 컴포넌트가 `LevelContent`를 읽기를 원한다고 알려준다.
-
-### step 3 : Provider the context
+### step 2 : Provider the context
 
 : context 제공하기\
 context provider로 감싸 `LevelContext`를 제공해야한다.
@@ -161,13 +159,25 @@ import { MyContext} from './MyContext.js';
 </MyContext.Provider>
 ```
 
+### step 3 : Use the context
+
+: React와 context에서 `useContext` Hook을 가져온다.
+
+```jsx
+export default function childComponent {
+	const level = useContext(LevelContext);
+}
+```
+
+`useContext`는 React에게 자식 컴포넌트가 `LevelContent`를 읽기를 원한다고 알려준다.
+
 Context를 활용하면 PropsDrilling 문제와 효율적인 lifting stateup을 할 수 있지만 하나의 context에서 많은 데이터나 복잡한 데이터 구조를 관리하면 재사용성과 테스트가 어려워진다.
 
 또한 context값을 변경할때마다 해당 context를 사용하는 모든 컴포넌트가 리렌더링 되기 때문에 적절한 단위로 분리하여 사용해야 한다. 많은 context로 상태를 관리하는 것도 효율이 떨어지므로 구조가 큰 경우 Redux, Mobx, Recoil와 같은 상태관리라이브러리를 사용하자
 
 ## useRef
 
-***
+---
 
 컴포넌트의 생애주기 전체에 걸쳐서 유지되는 객체. 즉, 컴포넌트가 없어질 때 까지 동일한 객체가 유지된다.
 
@@ -183,7 +193,7 @@ useRef를 사용하여 DOM요소에 직접 접근 할 수 있다.
 
 ## useLayoutEffect
 
-***
+---
 
 브라우저가 화면을 다시 그리기전에 실행 되는 useEffect
 
