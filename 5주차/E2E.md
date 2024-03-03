@@ -16,7 +16,7 @@ GUI가 없이 백그라운드에서 실행할 수 있는 Chrom브라우저\
 
 ## Puppeteer
 
-Google에서 만든 Node.js 라이브러리\
+Google에서 만든 Chrome 또는 Chromium브라우저를 제어하기 위해 사용되는 Node.js 라이브러리\
 Headless Chrome을 제어 하여 웹 페이지를 자동으로 렌더링하고 조작할 수 있게 해준다.\
 \-> 웹 스크랩핑, 자동화된 테스팅, 스크린샷 캡쳐 등 다양한 작업을 수행할 수 있다.
 
