@@ -23,6 +23,28 @@ Redux는 Flux 아키텍처의 영감을 받아 `Store`, `Action`, `Reducer`라�
 
 `Redux DevTool` 이라는 도구를 이용하여 상태변화를 시각적으로 추적하고 디버깅하는데 매우 유용하다.  
 
+```jsx
+// 커스텀 미들웨어 함수 작성
+const customMiddleware = store => next => action => {
+  // action을 전달하기 전에 원하는 작업을 수행할 수 있다.
+  console.log('액션 타입:', action.type);
+  
+  // 다음 미들웨어로 액션을 전달한다.
+  const result = next(action);
+
+  // 액션이 처리된 후에 추가적인 작업을 수행할 수 있다.
+  console.log('다음 상태:', store.getState());
+
+  return result;
+};
+
+// 미들웨어를 적용하여 스토어 생성
+const store = createStore(
+  rootReducer,
+  applyMiddleware(customMiddleware)
+);
+```
+
 ### 단점
 
 리덕스의 단점은 보일러플레이트 코드의 복잡성와 비동기 작업 처리의 불편함이다.  
@@ -32,6 +54,7 @@ Redux는 Flux 아키텍처의 영감을 받아 `Store`, `Action`, `Reducer`라�
 ## Reflect 
 
 ---  
+
 > ES6에서 추가된 내장 객체이며, 주로 메타 프로그래밍에 사용된다.  
 
 메서드의 종류는 프록시 처리기와 동일하여 객체의 기본 작업을 가로채고 조작할 수 있는 기능을 제공한다.  

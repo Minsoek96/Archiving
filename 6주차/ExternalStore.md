@@ -25,13 +25,17 @@
 
 ### Presentation Layer
 
-화면에 정보를 표시하는 것을 주 관심사로 둔다.  
-비즈니스 로직이 어떻게 수행 되는지 관심이 없다.  
+화면에 정보를 표시하는 것을 주관심사로 두는 계층입니다.  
+사용자 인터페이스(UI)와 사용자 경험(UX)를 처리한다.  
+사용자의 입력을 받아들이고, 데이터를 표시하는 역할을 한다.  
+비즈니스 로직이 어떻게 수행 되는지 관심이 없다.
 
 ### Business Layer  
 
+애플리케이션의 핵심 기능과 비즈니스 규칙을 담당하는 계층  
 Persistence Layer에서 데이터를 가져와 비즈니스 로직을 수행하고 그 결과를  
 Persistence Layer로 전달한다.  
+사용자의 요구 사항을 처리하고, 데이터의 처리와 변환을 담당한다.
 
 ### Persistence Layer  
 
@@ -91,7 +95,7 @@ const [state, dispatch] = useReducer(reducer, initialArg, init?)
 Reducer 함수는 상태(state)와 어떤 변화를 일으킬 `action`을 인자로 받아,  
 새로운 상태를 반환한다.   
 해당 함수는 순수함수여야 하며, 같은 인자가 주어졌을 때 항상 같은 결과가 반환해야 한다.  
-reduce() 연산에서 영감을 얻었다.  
+`reduce()` 연산에서 영감을 얻었다.  
 
 `state` 현재의 상태를 반환한다.  
 `dsipatch` 함수를 사용하여 Reducer함수에 인자를 전달할 수 있다.  
