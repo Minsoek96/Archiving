@@ -44,3 +44,71 @@ function Profile() {
 - 네트워크 회복시 재검증
 - 뮤테이션
 - 에러 재시도 
+
+## mutate
+
+> 데이터를 강제로 변경하고 재검증(revalidation)없이 캐시를 업데이트할 수 있는 기능  
+
+> 모든 키를 변경할 수 있는 `global mutate API`와 해당 SWR hook의 데이터만 변경할 수 있는 `bound mutate API`가 있다.
+
+### Global Mutate
+
+> `useSWRConfig` 훅은 SWR의 글로벌 설정와 유틸리티 함수에 접근할 수 있게 해준다.  
+`useSWRConfig`를 사용하면 컴포넌트 내에서 글로벌 `mutate`함수를 가져와서 사용할 수 있다.
+
+```jsx
+import { useSWRConfig } from 'swr'
+
+function Component() {
+  const { mutate } = useSWRConfig()
+
+  // 글로벌 mutate 사용 예시
+  const updateGlobalData = async () => {
+    const newData = { /* 새로운 데이터 */ }
+    await mutate('/api/data', newData, true)
+  }
+
+  return (
+    // UI 구성
+  )
+}
+
+```
+
+`mutate` 함수가 SWR의 글로벌 캐시와 연동되어 작동하게 된다. 어느 곳에서든 동일한 키로 패칭된 데이터를 업데이트할 수 있게 해주며, 데이터의 일관성와 동기화를 보다 쉽게 관리할 수 있게된다.
+
+```jsx
+import { mutate } from "swr"
+ 
+function App() {
+  mutate(key, data, options)
+}
+// 전역으로 가져올 수도 있음
+```
+
+### Bound Mutate
+
+> `Bound mutate`는 현재 키를 기반으로 데이터로 변경하는 빠른 방법이다.  
+`Global mutate`함수와 기능적으로 동일하지만 `key` 매개변수가 필요하지 않다.
+
+```jsx
+import useSWR from 'swr'
+ 
+function Profile () {
+  const { data, mutate } = useSWR('/api/user', fetcher)
+ 
+  return (
+    <div>
+      <h1>My name is {data.name}.</h1>
+      <button onClick={async () => {
+        const newName = data.name.toUpperCase()
+        // API에 대한 요청을 종료하여 데이터를 업데이트 합니다.
+        await requestUpdateUsername(newName)
+        // 로컬 데이터를 즉시 업데이트 하고 다시 유효성 검사(refetch)를 합니다.
+        // NOTE: key는 미리 바인딩되어 있으므로 useSWR의 mutate를 사용할 때 필요하지 않습니다.
+        mutate({ ...data, name: newName })
+      }}>Uppercase my name!</button>
+    </div>
+  )
+}
+```
