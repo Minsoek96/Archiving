@@ -1,22 +1,5 @@
 # Next.js
 
-## Dynamic Routes
-
-> 동적 페이지를 생성하는데 사용된다.
-
-- 정확한 세그먼트 이름을 미리 알지 못하는 경우
-- 동적 데이터로 경로를 결정하려는 경우
-
-요청 시 채워지거나 빌드 시 미리 렌더링되는 동적 세그먼트를 사용할 수 있다.
-
-**단일 다이나믹 라우트**  
-`pages/posts/[id]`
-
-**중첩 다이나믹 라우트**  
-`pages/posts/[id]/[comment]`
-
----
-
 ## AppRouter
 
 > Next.js @v13에서 추가된 라우팅 방식 
@@ -54,8 +37,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
 }
 ```
 
-`Layout`와 유사하지만 state를 보존하는 Layout와 달리 항상 새로운 인스턴스를 생성한다.
-
+`Layout`와 유사하지만 state를 보존하는 Layout와 달리 항상 새로운 인스턴스를 생성 한다.
 페이지 조회수 기록 같은 기능에 효과적이다
 
 ---
