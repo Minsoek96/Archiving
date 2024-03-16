@@ -73,3 +73,4 @@
   * [Next.js](Next/NextJS.md)
   * [Components](Next/Components.md)
   * [Routing](Next/Routing.md)
+  * [StyledComponent](Next/StyledComponent.md)
