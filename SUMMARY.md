@@ -69,10 +69,10 @@
   * [ReactHookForm](12주차/ReactHookForm.md)
   * [Swr](12주차/useSWR.md)
 * [After(경계선)](after)
-* [Next](dev/after/README.md)
+* [Next]
   * [Next.js](Next/NextJS.md)
   * [Components](Next/Components.md)
   * [Routing](Next/Routing.md)
   * [StyledComponent](Next/StyledComponent.md)
-* [lib](dev/after/README.md)
+* [lib]
   * [Day.js](lib/Dayjs.md)
