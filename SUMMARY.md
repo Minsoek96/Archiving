@@ -72,6 +72,7 @@
 * [BASE]
   * [SPA](BASE/SPA.md)
   * [SEO](BASE/SEO.md)
+  * [OAuth](BASE/OAuth.md)
 * [Next]
   * [Next.js](Next/NextJS.md)
   * [Components](Next/Components.md)
