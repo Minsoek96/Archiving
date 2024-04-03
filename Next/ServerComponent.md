@@ -46,3 +46,47 @@ SSR에서는 서버가 초기 페이지 로드시 `HTML`을 생성하여 전송�
 ## 최종 정리
 
 서버 컴포넌트는 단순한 HTML을 클라이언트에게 전달하는 것이 아닌 컴포넌트의 상태와 구조를 나타내는 특별한 형태로 데이터를 전달하여 사용자의 인터렉션에 의해 생성된 클라이언트의 상태를 유지할 수 있을뿐만 아니라 필요에 따라 서버 컴포넌트에서 데이터를 다시 Fetch하고 리렌더링할 때도 클라이언트 상태를 유지할 수 있다.
+
+## 번외 : 하이브리드 렌더링 
+
+> 서버 컴포넌트를 사용하여 `SSR(Server-Side Rendering)`을 구현할 때, 내부적으로 스타일드 컴포넌트를 적용해야 하는 상황에 `‘use client’`를 사용하면서 오류가 발생한다면 하이브리드렌더링 방식으로 서버컴포넌트와 클라이언트 컴포넌트를 조합하여 사용하면 된다
+
+```jsx
+import { dehydrate, HydrationBoundary, QueryClient } from '@tanstack/react-query';
+
+import getPostRecommends from '@/app/_lib/getPostRecommends';
+
+import Container from '@/app/(afterLogin)/home/_style/Container';
+import Tab from '../_components/tab/Tab';
+import PostForm from '../_components/Post/PostForm';
+import PostViewList from '../_components/Post/PostViewList';
+
+export default async function Home() {
+  const queryClient = new QueryClient();
+  await queryClient.prefetchQuery({
+    queryKey: ['posts', 'recommends'],
+    queryFn: getPostRecommends,
+  });
+
+  const dehydratedState = dehydrate(queryClient);
+
+  return (
+    <Container>
+      <HydrationBoundary state={dehydratedState}>
+        <Tab />
+        <PostForm />
+        <PostViewList />
+      </HydrationBoundary>
+    </Container>
+  );
+}
+
+```
+
+하이브리드 렌더링 접근 방식에서는 다음과 같은 단계를 따른다.
+
+1. **서버 사이드 렌더링(SSR)** :  서버에서 `Home` 컴포넌트가 렌더링되어 필요한 데이터를 미리 가져온다. 이 데이터는 서버에서 처리된 후 클라이언트로 전송된다.
+2. **클라이언트 사이드 하이드레이션** : 클라이언트는 서버로 부터 받은 데이터와 마크업을 사용하여, 클라이언트 사이드에서 스타일과 동작을 적용한다.
+3. **인터랙티브** :  하이드레이션 과정이 완료된 후, 상호작용할 수 있다.
+
+서버 컴포넌트는 데이터를 미리 가져오고 처리하는 데 사용되며, 클라이언트 컴포넌트는 사용자 인터렉션과 관련된 스타일링 및 동작을 담당한다. 서버와 클라이언트 컴포넌트를 조합함으로써, 효율적인 데이터 로딩과 풍부한 사용자 경험을 제공할 수 있다.
