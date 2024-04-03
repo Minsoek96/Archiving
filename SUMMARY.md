@@ -80,5 +80,6 @@
   * [StyledComponent](Next/StyledComponent.md)
   * [ServerComponent](Next/ServerComponent.md)
 * [ReactQuery](ReactQuery/base.md)  
+  * [Setting](ReactQuery/setting.md)
 * [lib]
   * [Day.js](lib/Dayjs.md)
