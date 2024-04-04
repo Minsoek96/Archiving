@@ -17,7 +17,7 @@ npm install @tanstack/react-query-devtools
 # 또는
 yarn add @tanstack/react-query-devtools
 ```
-
+  
 ---
 
 ## QueryClient
@@ -39,7 +39,7 @@ const queryClient = new QueryClient({
   },
 });
 ```
-
+  
 ---
 
 ### DefaultOptions
@@ -61,7 +61,7 @@ const queryClient = new QueryClient({
 - `onSucess` mutation이 성공적으로 완료된 후에 호출될 함수
 - `onError`  mutation이 실패했을 때 호출될 함수
 - `onSettled` mutation이 성공하든 실패하든 최종적으로 호출될 함수
-
+  
 ---
 
 ## QueryClientProvider
@@ -106,5 +106,3 @@ function RQProvider({ children }: Props) {
 }
 
 export default RQProvider;
-
-```

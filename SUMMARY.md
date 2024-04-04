@@ -81,5 +81,7 @@
   * [ServerComponent](Next/ServerComponent.md)
 * [ReactQuery](ReactQuery/base.md)  
   * [Setting](ReactQuery/setting.md)
+  * [CacheLifeCycle](ReactQuery/CacheLifeCycle.md)
+  * [QueryKey](ReactQuery/queryKeys.md)
 * [lib]
   * [Day.js](lib/Dayjs.md)
