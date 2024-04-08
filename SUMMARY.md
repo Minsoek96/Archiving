@@ -83,5 +83,6 @@
   * [Setting](ReactQuery/setting.md)
   * [CacheLifeCycle](ReactQuery/CacheLifeCycle.md)
   * [QueryKey](ReactQuery/queryKeys.md)
+  * [useQuery](ReactQuery/useQuery.md)
 * [lib]
   * [Day.js](lib/Dayjs.md)
