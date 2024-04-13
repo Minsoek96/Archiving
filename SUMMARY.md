@@ -74,6 +74,8 @@
   * [SEO](BASE/SEO.md)
   * [OAuth](BASE/OAuth.md)
   * [EventPropagation](BASE/EventPropagation.md)
+  * [XSS](BASE/XSS.md)
+  * [CSRF](BASE/CSRF.md)
 * [React]
   * [LifeCycle](React/LifeCycle.md)
   * [fowardRef](React/ForwardRef.md)
