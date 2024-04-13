@@ -76,6 +76,7 @@
   * [EventPropagation](BASE/EventPropagation.md)
   * [XSS](BASE/XSS.md)
   * [CSRF](BASE/CSRF.md)
+  * [Cookies](BASE/Cookies.md)
 * [React]
   * [LifeCycle](React/LifeCycle.md)
   * [fowardRef](React/ForwardRef.md)
