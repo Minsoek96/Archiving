@@ -77,6 +77,7 @@
   * [XSS](BASE/XSS.md)
   * [CSRF](BASE/CSRF.md)
   * [Cookies](BASE/Cookies.md)
+  * [CDN](BASE/CDN.md)
 * [React]
   * [LifeCycle](React/LifeCycle.md)
   * [fowardRef](React/ForwardRef.md)
