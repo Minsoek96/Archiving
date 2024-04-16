@@ -78,6 +78,7 @@
   * [CSRF](BASE/CSRF.md)
   * [Cookies](BASE/Cookies.md)
   * [CDN](BASE/CDN.md)
+  * [Lazy-Loading](BASE/Lazy-Loading.md)
 * [React]
   * [LifeCycle](React/LifeCycle.md)
   * [fowardRef](React/ForwardRef.md)
