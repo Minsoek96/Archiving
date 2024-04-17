@@ -93,5 +93,6 @@
   * [CacheLifeCycle](ReactQuery/CacheLifeCycle.md)
   * [QueryKey](ReactQuery/queryKeys.md)
   * [useQuery](ReactQuery/useQuery.md)
+  * [QueryClient](ReactQuery/QueryClient.md)
 * [lib]
   * [Day.js](lib/Dayjs.md)
