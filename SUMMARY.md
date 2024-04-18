@@ -94,5 +94,6 @@
   * [QueryKey](ReactQuery/queryKeys.md)
   * [useQuery](ReactQuery/useQuery.md)
   * [QueryClient](ReactQuery/QueryClient.md)
+  * [dehydrate](ReactQuery/dehydrate.md)
 * [lib]
   * [Day.js](lib/Dayjs.md)
