@@ -88,6 +88,7 @@
   * [Routing](Next/Routing.md)
   * [StyledComponent](Next/StyledComponent.md)
   * [ServerComponent](Next/ServerComponent.md)
+  * [revalidate](Next/revalidate.md)
 * [ReactQuery](ReactQuery/base.md)  
   * [Setting](ReactQuery/setting.md)
   * [CacheLifeCycle](ReactQuery/CacheLifeCycle.md)
