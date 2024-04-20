@@ -89,6 +89,7 @@
   * [StyledComponent](Next/StyledComponent.md)
   * [ServerComponent](Next/ServerComponent.md)
   * [revalidate](Next/revalidate.md)
+  * [next/image](Next/next-image.md)
 * [ReactQuery](ReactQuery/base.md)  
   * [Setting](ReactQuery/setting.md)
   * [CacheLifeCycle](ReactQuery/CacheLifeCycle.md)
