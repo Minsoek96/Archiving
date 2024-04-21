@@ -79,6 +79,7 @@
   * [Cookies](BASE/Cookies.md)
   * [CDN](BASE/CDN.md)
   * [Lazy-Loading](BASE/Lazy-Loading.md)
+  * [WebAccessbility](BASE/WebAccessbility.md)
 * [React]
   * [LifeCycle](React/LifeCycle.md)
   * [fowardRef](React/ForwardRef.md)
