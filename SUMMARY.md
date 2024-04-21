@@ -80,6 +80,7 @@
   * [CDN](BASE/CDN.md)
   * [Lazy-Loading](BASE/Lazy-Loading.md)
   * [WebAccessbility](BASE/WebAccessbility.md)
+  * [translate](BASE/translate.md)
 * [React]
   * [LifeCycle](React/LifeCycle.md)
   * [fowardRef](React/ForwardRef.md)
