@@ -59,3 +59,42 @@
 - `domains` 속성을 사용하여 이미지를 제공할 수 있는 도메인을 제한할 수 있다.
 - `blurhash` 속성을 사용하면 실제 이미지가 로드되는 동안 이미지의 흐릿한 버전을 표시할 수 있다. 이는 페이지의 인지된 성능을 향상시키는 데 도움이 될 수 있다.
 - `priority` 속성은 로드할 이미지의 우선 순위를 제어한다. 우선 순위가 높은 이미지는 우선 순위가 낮은 이미지보다 먼저 로드된다.
+
+---
+  
+## 변경사항 (Next.js 13버전)
+
+### 필수 속성 추가
+
+- alt : 이미지를 설명하는 대체 텍스트가 필수 속성이 되었다.
+
+### 삭제된 속성:
+
+- `layout`  :  이전에는 이미지 레이아웃을 제어하는 `layout` 속성이 있었지만, 13버전 부터는 이미지 컨테이너 크기를 CSS로 직접 스타일링 하는 방식으로 변경되었다.
+- `objectFit` : 이미지 크기 조정을 위해 사용되던 `objectFit` 속성도 삭제되었다. 마찬가지로 CSS 스타일링을 이용하여 이미지 크기 조정을  수 있다.
+- `objectPostion` :  이미지 위치 조정을 위한 `objectPostion` 속성도 삭제되었다.
+
+### onLoadingComplete 업데이트
+
+- `onLoadingComplete` : 콜백 함수에서 이제 이미지 요소 (<img>)자체를 인자로 받을 수 있따.
+
+### props 표
+
+| 속성 | 유형 | 설명 | 기본값 | 필수 여부 |
+| --- | --- | --- | --- | --- |
+| src | String | 이미지 소스 URL 또는 파일 경로 | - | 필수 |
+| width | Integer (px) | 이미지 너비 (픽셀) | - | 필수 |
+| height | Integer (px) | 이미지 높이 (픽셀) | - | 필수 |
+| alt | String | 대체 텍스트 | - | 필수 |
+| loader | Function | 이미지 로딩을 위한 커스텀 로더 함수 | defaultLoader | 선택 |
+| fill | Boolean | 이미지를 컨테이너 전체에 채우도록 설정 | false | 선택 |
+| sizes | String | 이미지 크기 조정 규칙 | (max-width: 768px) 100vw, 50vw | 선택 |
+| quality | Integer (1-100) | 이미지 품질 | 75 | 선택 |
+| priority | Boolean | 이미지 로딩 우선순위를 높임 | false | 선택 |
+| placeholder | String | 이미지 로딩 동안 표시되는 플레이스홀더 유형 | blur | 선택 |
+| style | Object | 이미지 스타일 | - | 선택 |
+| onLoadingComplete | Function | 이미지 로딩 완료 시 호출되는 함수 | - | 선택 |
+| onError | Function | 이미지 로딩 오류 발생 시 호출되는 함수 | - | 선택 |
+| loading | String | 이미지 로딩 방식 | lazy | 선택 |
+| blurDataURL | String | 이미지 로딩 동안 표시되는 블러 효과 데이터 URL | - | 선택 |
+| overrideSrc | String | SEO를 위한 대체 이미지 소스 URL | - | 선택 |
