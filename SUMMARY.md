@@ -81,6 +81,7 @@
   * [Lazy-Loading](BASE/Lazy-Loading.md)
   * [WebAccessbility](BASE/WebAccessbility.md)
   * [translate](BASE/translate.md)
+  * [infiniteScroll](BASE/InfiniteScroll.md)
 * [React]
   * [LifeCycle](React/LifeCycle.md)
   * [fowardRef](React/ForwardRef.md)
