@@ -83,6 +83,8 @@
   * [WebAccessbility](BASE/WebAccessbility.md)
   * [translate](BASE/translate.md)
   * [infiniteScroll](BASE/InfiniteScroll.md)
+  * [FileReader](BASE/FileReader.md)
+  * [ImageCrop](BASE/ImageCrop.md)
 * [React]
   * [LifeCycle](React/LifeCycle.md)
   * [fowardRef](React/ForwardRef.md)
