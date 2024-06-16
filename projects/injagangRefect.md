@@ -185,19 +185,6 @@ if (!runValidationChecks()) return;
 ### 토스트 코드
 
 ```jsx
-import React, { useCallback, useState } from "react";
-import styled from "styled-components";
-import { v4 as uuid4 } from "uuid";
-import { TOAST_MODE } from "@/constants";
-import ToastItem from "./ToastItem";
-import { useSelector } from "react-redux";
-import { RootReducerType } from "@/components/redux/store";
-import { useDispatch } from "react-redux";
-import {
-  hideToastAction,
-  showToastAction,
-} from "@/components/redux/Toast/actions";
-
 export interface IToast {
   id: string;
   message: string;
