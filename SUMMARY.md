@@ -86,6 +86,7 @@
   - [FileReader](BASE/FileReader.md)
   - [ImageCrop](BASE/ImageCrop.md)
   - [debounce](BASE/debounce.md)
+  - [lightHouse](BASE/Lighthouse.md)
 - [React]
   - [LifeCycle](React/LifeCycle.md)
   - [fowardRef](React/ForwardRef.md)
@@ -111,3 +112,4 @@
   - [contry](projects/country.md)
   - [growthProcess](projects/Growthprocess.md)
   - [InjagangRefect](projects/injagangRefect.md)
+  - [InjaganglightHouse](projects/injagangRefects/lightHouse.md)
