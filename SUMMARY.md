@@ -87,9 +87,11 @@
   - [ImageCrop](BASE/ImageCrop.md)
   - [debounce](BASE/debounce.md)
   - [lightHouse](BASE/Lighthouse.md)
+  - [FSD](BASE/FSD.md)
 - [React]
   - [LifeCycle](React/LifeCycle.md)
   - [fowardRef](React/ForwardRef.md)
+  - [Suspense](React/Suspense.md)
 - [Next]
   - [Next.js](Next/NextJS.md)
   - [Components](Next/Components.md)

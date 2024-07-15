@@ -32,3 +32,21 @@ function MyComponent({ value }) {
   // deferredValue 사용
 }
 ```
+
+## 고급 활용법 
+
+### 동적 코드 스플리팅
+
+React.lazy를 사용하여 컴포넌트를 동적으로 로드하고 Suspense를 사용하여 로딩 상태를 관리한다. 
+
+```jsx
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+function App() {
+  return (
+    <Suspense fallback={<div>Loading other component...</div>}>
+      <OtherComponent />
+    </Suspense>
+  );
+}
+```
