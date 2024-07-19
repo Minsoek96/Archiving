@@ -109,6 +109,7 @@
   - [dehydrate](ReactQuery/dehydrate.md)
 - [Test]
   - [Base](Test/base.md)
+  - [Object](Test/object.md)
   - [Mock](Test/mock.md)
   - [TimerMock](Test/timerMock.md)
 - [lib]

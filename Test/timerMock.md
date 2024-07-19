@@ -114,6 +114,7 @@ describe("infiniteTimerGame", () => {
 ### 타이머를 시간 단위로 진행
 
 - `jest.advenceTimersByTime(msToRun)` 을 사용하면 API가 호출되면 모든 타이머가 `msToRun` 밀리초만큼 진행된다.
+- 테스트 에서 대기 중인 모든 타이머를 지워야 하는 상황에는 `jest.clearAllTimers()`를 사용할 수 있다.
 
 ```tsx
 function timerGame(callback) {
@@ -146,3 +147,4 @@ it("1초 후 콜백을 호출합니다 (advanceTimersByTime 사용)", () => {
   expect(callback).toHaveBeenCalledTimes(1);
 });
 ```
+
