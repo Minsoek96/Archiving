@@ -110,6 +110,7 @@
 - [Test]
   - [Base](Test/base.md)
   - [Object](Test/object.md)
+  - [Function](Test/function.md)
   - [Mock](Test/mock.md)
   - [TimerMock](Test/timerMock.md)
 - [lib]
