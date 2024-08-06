@@ -88,6 +88,8 @@
   - [debounce](BASE/debounce.md)
   - [lightHouse](BASE/Lighthouse.md)
   - [FSD](BASE/FSD.md)
+- [WEBAPI]
+  - [GetSelection](WebApi/getSelection.md)
 - [React]
   - [LifeCycle](React/LifeCycle.md)
   - [fowardRef](React/ForwardRef.md)
