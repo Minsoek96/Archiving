@@ -68,7 +68,6 @@
   - [ControlledCompoents](12주차/ControlledCompoents.md)
   - [ReactHookForm](12주차/ReactHookForm.md)
   - [Swr](12주차/useSWR.md)
-- [After(경계선)](dev/after/README.md)
 
 ## BASE
 
@@ -91,6 +90,7 @@
   - [debounce](BASE/debounce.md)
   - [lightHouse](BASE/Lighthouse.md)
   - [FSD](BASE/FSD.md)
+  - [TreeShaking](BASE/TreeShaking.md)
 - [WEBAPI]
   - [GetSelection](WebApi/getSelection.md)
 - [React]
