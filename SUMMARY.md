@@ -2,11 +2,11 @@
 
 ## GitBook
 
-- [Git Book 가이드](README.md)
+- [白民石:기초를쌓는사람](README.md)
 - [GitHub과 연동하기](gitbook/github/README.md)
   - [PR 날리기](gitbook/github/pr.md)
 
-## Dev
+## MegapTera
 
 - [1주차](dev/1/README.md)
   - [개발환경셋팅](1주차/Environment.md)
@@ -69,7 +69,10 @@
   - [ReactHookForm](12주차/ReactHookForm.md)
   - [Swr](12주차/useSWR.md)
 - [After(경계선)](dev/after/README.md)
-- [BASE]
+
+## BASE
+
+- [Technologies]
   - [WEB](BASE/Web.md)
   - [SPA](BASE/SPA.md)
   - [SEO](BASE/SEO.md)
@@ -115,8 +118,11 @@
   - [Function](Test/function.md)
   - [Mock](Test/mock.md)
   - [TimerMock](Test/timerMock.md)
-- [lib]
+- [ETC..]
   - [Day.js](lib/Dayjs.md)
+
+## 프로젝트 및 삶의 도전
+
 - [projects]
   - [Injagang](projects/injagang.md)
   - [contry](projects/country.md)
