@@ -92,7 +92,9 @@
   - [FSD](BASE/FSD.md)
   - [TreeShaking](BASE/TreeShaking.md)
 - [WEBAPI]
-  - [GetSelection](WebApi/getSelection.md)
+  - [getSelection](WebApi/getSelection.md)
+  - [getUserMedia](WebApi/getUserMedia.md)
+  - [MediaStream](webApi/mediaStream.md)
 - [React]
   - [LifeCycle](React/LifeCycle.md)
   - [fowardRef](React/ForwardRef.md)
