@@ -92,6 +92,7 @@
   - [FSD](BASE/fsd/summary.md)
     - [layer](BASE/fsd/layer.md)
     - [slices](BASE/fsd/slices.md)
+    - [publicAPI](BASE/fsd/publicAPI.md)
   - [TreeShaking](BASE/TreeShaking.md)
 - [WEBAPI]
   - [getSelection](WebApi/getSelection.md)
