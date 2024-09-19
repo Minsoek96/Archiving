@@ -89,7 +89,9 @@
   - [ImageCrop](BASE/ImageCrop.md)
   - [debounce](BASE/debounce.md)
   - [lightHouse](BASE/Lighthouse.md)
-  - [FSD](BASE/FSD.md)
+  - [FSD](BASE/fsd/summary.md)
+    - [layer](BASE/fsd/layer.md)
+    - [slices](BASE/fsd/slices.md)
   - [TreeShaking](BASE/TreeShaking.md)
 - [WEBAPI]
   - [getSelection](WebApi/getSelection.md)
