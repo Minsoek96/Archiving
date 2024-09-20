@@ -93,6 +93,7 @@
     - [layer](BASE/fsd/layer.md)
     - [slices](BASE/fsd/slices.md)
     - [publicAPI](BASE/fsd/publicAPI.md)
+    - [youtube](BASE/fsd/youtubeLecture.md)
   - [TreeShaking](BASE/TreeShaking.md)
 - [WEBAPI]
   - [getSelection](WebApi/getSelection.md)
