@@ -125,8 +125,9 @@
   - [Mock](Test/mock.md)
   - [TimerMock](Test/timerMock.md)
 - [NetWork](/Network/summary.md)
-  - [1강](/Network/network.md)
-  - [2강](/Network/osi7.md)
+  - [1강-네트워크](/Network/network.md)
+  - [2강-모델](/Network/osi7.md)
+  - [3강-이더넷](/Network/ethernet.md)
 - [ETC..]
   - [Day.js](lib/Dayjs.md)
 
