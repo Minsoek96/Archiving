@@ -131,6 +131,8 @@
   - [4강-NAT](/Network/subnet.md)
   - [5강-ARP](/Network/arp.md)
   - [6강-IPv4](/Network/ipv4.md)
+  - [6강-ICMP](/Network/icmp.md)
+  - [6강-Fragmentation](/Network/flagmentation.md)
 - [ETC..]
   - [Day.js](lib/Dayjs.md)
 
