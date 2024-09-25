@@ -1,4 +1,4 @@
-b# IPv4의 조각화
+# IPv4의 조각화
 
 IPv4의 조각화는 IP 패킷이 네트워크를 통해 전달될 때 **MTU(Maximum Transmission UInit)**을 초과하지 않도록 패킷을 여러 조각으로 나누는 과정이다.
 
