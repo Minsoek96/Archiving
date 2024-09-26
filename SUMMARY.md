@@ -133,7 +133,8 @@
   - [6강-IPv4](/Network/ipv4.md)
   - [6강-ICMP](/Network/icmp.md)
   - [6강-Fragmentation](/Network/flagmentation.md)
-  - [7강-PORT](/Network/port.md)
+  - [7,8강-PORT](/Network/port.md)
+  - [9강-TCP](/Network/tcp.md)
 - [ETC..]
   - [Day.js](lib/Dayjs.md)
 
