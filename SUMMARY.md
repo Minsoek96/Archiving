@@ -155,3 +155,6 @@
     - [themeRefect](projects/injagangRefects/themeRefect.md)
     - [typeRefect](projects/injagangRefects/typeRefect.md)
     - [LightHouse](projects/injagangRefects/lightHouse.md)
+  - [intervgym](projects/intervgym.md)
+    - [AI 피드백 프롬프트 평가](projects/intervgym/feedback-prompt-eval.md)
+    - [질문 읽기 TTS 축소](projects/intervgym/tts-model-size.md)
