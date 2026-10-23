@@ -10,5 +10,5 @@
 | 글 | 한 줄 요약 |
 | --- | --- |
 | [AI 피드백 프롬프트: 외워서 맞히던 평가를 처음 보는 문항으로 다시 쟀다](intervgym/feedback-prompt-eval.md) | 평가 오염을 찾아내고 판정 오류 16/296 → 8/296, 페르소나 프롬프트보다 2배 빠름 |
-| [질문 읽기 TTS: 380MB 모델을 93MB로](intervgym/tts-model-size.md) | 공개 TTS 모델을 부분 양자화해 브라우저에서 합성, 원본과 SNR 40~46dB |
+| [질문 읽기 TTS: 380MB 모델을 65MB로](intervgym/tts-model-size.md) | 공개 TTS 모델을 브라우저에서 합성. int8 계산이 브라우저에서 5배 느려, 가중치만 int8로 담는 65MB 판으로 바꿔 문장당 1.4~3.5초 |
 | [면접 질문 생성: 무료 모델을 두고 유료 모델을 고른 이유](intervgym/question-generation-model.md) | 12개 직무 블라인드 평가에서 Luna 전부 1위, 규칙 위반 직무당 0.7 대 4~5개. 프롬프트로 안 되는 조건은 코드로 |
