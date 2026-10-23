@@ -158,3 +158,4 @@
   - [intervgym](projects/intervgym.md)
     - [AI 피드백 프롬프트 평가](projects/intervgym/feedback-prompt-eval.md)
     - [질문 읽기 TTS 축소](projects/intervgym/tts-model-size.md)
+    - [질문 생성 모델 고르기](projects/intervgym/question-generation-model.md)
