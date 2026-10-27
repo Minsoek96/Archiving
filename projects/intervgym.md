@@ -13,3 +13,4 @@
 | [질문 읽기 TTS: 380MB 모델을 65MB로](intervgym/tts-model-size.md) | 공개 TTS 모델을 브라우저에서 합성. int8 계산이 브라우저에서 5배 느려, 가중치만 int8로 담는 65MB 판으로 바꿔 문장당 1.4~3.5초 |
 | [면접 질문 생성: 무료 모델을 두고 유료 모델을 고른 이유](intervgym/question-generation-model.md) | 12개 직무 블라인드 평가에서 Luna 전부 1위, 규칙 위반 직무당 0.7 대 4~5개. 프롬프트로 안 되는 조건은 코드로 |
 | [아무도 정하지 않은 import 순서를 에이전트들이 지키고 있었다](intervgym/implicit-import-order.md) | 규칙이 없었는데 import가 두 종류 이상인 파일 90%(251개 중 225개)가 원래 정리 방식을 지켰다. 판단이 필요 없는 부분만 lint로 굳혔다 |
+| [첫 방문 전송량의 82%가 글꼴 한 파일이었다](intervgym/font-dynamic-subset.md) | 한글 11,172자가 다 든 글꼴 원본(2MB)을 동적 서브셋으로 바꿔 화면 글자 조각만 받기. 모바일 첫 방문 2,451KB → 660KB, load 약 2.8초 → 1.4초 |

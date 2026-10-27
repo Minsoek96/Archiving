@@ -160,3 +160,4 @@
     - [질문 읽기 TTS 축소](projects/intervgym/tts-model-size.md)
     - [질문 생성 모델 고르기](projects/intervgym/question-generation-model.md)
     - [규칙 없이 지켜진 import 순서](projects/intervgym/implicit-import-order.md)
+    - [첫 방문 글꼴 2MB 줄이기](projects/intervgym/font-dynamic-subset.md)
