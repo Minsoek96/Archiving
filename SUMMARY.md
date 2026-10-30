@@ -161,3 +161,4 @@
     - [질문 생성 모델 고르기](projects/intervgym/question-generation-model.md)
     - [규칙 없이 지켜진 import 순서](projects/intervgym/implicit-import-order.md)
     - [첫 방문 글꼴 2MB 줄이기](projects/intervgym/font-dynamic-subset.md)
+    - [에이전트에게 맡기려고 만든 것](projects/intervgym/harness-engineering.md)
